@@ -5,8 +5,10 @@ int main() {
     float distance;
     int selectedShip;
     std::cout << "[0] Sevastopol" << std::endl << "[1] Negev" << std::endl << "[2] Nomad" << std::endl << "[3] Lightning" << std::endl;
-    std::cout << "Choose a ship: ";
-    std::cin >> selectedShip;
+    do {
+        std::cout << "Choose a ship: ";
+        std::cin >> selectedShip;
+    } while (selectedShip < 0 || selectedShip > 3);
     std::cout << std::endl << "Input distance (in km): ";
     std::cin >> distance;
     float totalFuel = getTotalFuel(distance, ships[selectedShip].consumption);
