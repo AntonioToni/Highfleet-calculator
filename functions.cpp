@@ -18,3 +18,7 @@ unsigned long int getPrice(float totalFuel) {
 float getTotalFuel(float distance, float consumption) {
     return(distance * (consumption / 1000));
 }
+
+float getTime(float distance, int cruiseSpeed) {
+    return(distance / cruiseSpeed);
+}

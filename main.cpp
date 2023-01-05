@@ -13,7 +13,7 @@ int main() {
     std::cout << std::endl << "To fly " << distance << "km with " << ships[selectedShip].name << " : " << std::endl;
     std::cout << "Fuel needed: " << totalFuel << " tons of methane." << std::endl;
     std::cout << "Costing you: " << getPrice(totalFuel) << " euros" << std::endl;
-    std::cout << "Travel time: " << distance/ships[selectedShip].cruiseSpeed << "h" << std::endl << std::endl;
+    std::cout << "Travel time: " << getTime(distance, ships[selectedShip].cruiseSpeed) << "h" << std::endl << std::endl;
     std::cout << "Press any key to escape" << std::endl;
     getch();
 }

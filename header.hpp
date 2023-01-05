@@ -15,3 +15,4 @@ class ship
 
 unsigned long int getPrice(float totalFuel);
 float getTotalFuel(float distance, float consumption);
+float getTime(float distance, int cruiseSpeed);
