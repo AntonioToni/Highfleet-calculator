@@ -1,6 +1,7 @@
 #include "header.hpp"
 
-ship::ship(int cruiseSpeed, float consumption) {
+ship::ship(std::string name, int cruiseSpeed, float consumption) {
+    this->name = name;
     this->cruiseSpeed = cruiseSpeed;
     this->consumption = consumption;
 }
@@ -16,4 +17,8 @@ unsigned long int getPrice(float totalFuel) {
 
 float getTotalFuel(float distance, float consumption) {
     return(distance * (consumption / 1000));
+}
+
+float getTime(float distance, int cruiseSpeed) {
+    return(distance / cruiseSpeed);
 }
